@@ -7,6 +7,7 @@ const App = () => {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState("");
 
+  // Fetch notes from Firestore
   const fetchNotes = async () => {
     const querySnapshot = await getDocs(collection(db, "notes"));
     const notesData = querySnapshot.docs.map((doc) => ({
@@ -16,20 +17,24 @@ const App = () => {
     setNotes(notesData);
   };
 
+  // Add a new note to Firestore
   const addNote = async () => {
     if (newNote.trim() === "") return;
     await addDoc(collection(db, "notes"), {
       text: newNote,
+      createdAt: new Date(),
     });
     setNewNote("");
-    fetchNotes();
+    fetchNotes(); // Refresh the notes list
   };
 
+  // Delete a note from Firestore
   const deleteNote = async (id) => {
     await deleteDoc(doc(db, "notes", id));
-    fetchNotes();
+    fetchNotes(); // Refresh the notes list
   };
 
+  // Fetch notes on component mount
   useEffect(() => {
     fetchNotes();
   }, []);
