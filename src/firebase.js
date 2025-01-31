@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyARjZgQLfPSDD8V6noNbwJuCFYBvK4Ekrs",
+  authDomain: "notewebapp-41960.firebaseapp.com",
+  projectId: "notewebapp-41960",
+  storageBucket: "notewebapp-41960.firebasestorage.app",
+  messagingSenderId: "696997765869",
+  appId: "1:696997765869:web:3a5bdeff46971e1d0ee2e4",
 };
 
 const app = initializeApp(firebaseConfig);
