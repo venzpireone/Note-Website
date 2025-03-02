@@ -1,6 +1,6 @@
 # Google Keep Clone
 
-This is a clone of Google Keep created using **React** and **Material UI**. It allows users to add, archive, and delete notes, with notes being stored in local storage. The app also features drag and drop functionality for notes and automatically deletes deleted notes after 7 days.
+This is a clone of Google Keep created using **React** and **Material UI**. It allows users to add, archive, and delete notes, with notes being stored in local  storage. The app also features drag and drop functionality for notes and automatically deletes deleted notes after 7 days.
 
 ## Table of Contents
 
